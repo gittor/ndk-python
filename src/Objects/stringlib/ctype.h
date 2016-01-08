@@ -1,6 +1,9 @@
 /* NOTE: this API is -ONLY- for use with single byte character strings. */
 /* Do not use it with Unicode. */
 
+#ifndef XXXXZZ_CTYPE_H
+#define XXXXZZ_CTYPE_H
+
 #include "bytes_methods.h"
 
 static PyObject*
@@ -107,3 +110,5 @@ stringlib_swapcase(PyObject *self)
                     STRINGLIB_LEN(self));
     return newobj;
 }
+
+#endif

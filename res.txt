@@ -1,291 +1,268 @@
-[armeabi] Compile thumb  : protobuf <= _bisectmodule.c
-In file included from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:57:0,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:85,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Modules/_bisectmodule.c:6:
+[armeabi] Compile thumb  : protobuf <= test.c
+[armeabi] Compile thumb  : protobuf <= abstract.c
+In file included from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:58:0,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:77,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Objects/abstract.c:3:
 /Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h: In function 'stringlib_isspace':
-/Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:9:5: warning: passing argument 1 of '_Py_bytes_isspace' makes pointer from integer without a cast [enabled by default]
+/Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:12:5: warning: passing argument 1 of '_Py_bytes_isspace' makes pointer from integer without a cast [enabled by default]
      return _Py_bytes_isspace(STRINGLIB_STR(self), STRINGLIB_LEN(self));
      ^
-In file included from /Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:4:0,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:57,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:85,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Modules/_bisectmodule.c:6:
-/Users/zhangdw/Downloads/python/jni/../src/Include/bytes_methods.h:8:18: note: expected 'const char *' but argument is of type 'int'
+In file included from /Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:7:0,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:58,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:77,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Objects/abstract.c:3:
+/Users/zhangdw/Downloads/python/jni/../src/Include/bytes_methods.h:9:18: note: expected 'const char *' but argument is of type 'int'
  extern PyObject* _Py_bytes_isspace(const char *cptr, Py_ssize_t len);
                   ^
-In file included from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:57:0,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:85,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Modules/_bisectmodule.c:6:
+In file included from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:58:0,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:77,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Objects/abstract.c:3:
 /Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h: In function 'stringlib_isalpha':
-/Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:15:5: warning: passing argument 1 of '_Py_bytes_isalpha' makes pointer from integer without a cast [enabled by default]
+/Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:18:5: warning: passing argument 1 of '_Py_bytes_isalpha' makes pointer from integer without a cast [enabled by default]
      return _Py_bytes_isalpha(STRINGLIB_STR(self), STRINGLIB_LEN(self));
      ^
-In file included from /Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:4:0,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:57,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:85,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Modules/_bisectmodule.c:6:
-/Users/zhangdw/Downloads/python/jni/../src/Include/bytes_methods.h:9:18: note: expected 'const char *' but argument is of type 'int'
+In file included from /Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:7:0,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:58,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:77,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Objects/abstract.c:3:
+/Users/zhangdw/Downloads/python/jni/../src/Include/bytes_methods.h:10:18: note: expected 'const char *' but argument is of type 'int'
  extern PyObject* _Py_bytes_isalpha(const char *cptr, Py_ssize_t len);
                   ^
-In file included from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:57:0,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:85,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Modules/_bisectmodule.c:6:
+In file included from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:58:0,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:77,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Objects/abstract.c:3:
 /Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h: In function 'stringlib_isalnum':
-/Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:21:5: warning: passing argument 1 of '_Py_bytes_isalnum' makes pointer from integer without a cast [enabled by default]
+/Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:24:5: warning: passing argument 1 of '_Py_bytes_isalnum' makes pointer from integer without a cast [enabled by default]
      return _Py_bytes_isalnum(STRINGLIB_STR(self), STRINGLIB_LEN(self));
      ^
-In file included from /Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:4:0,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:57,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:85,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Modules/_bisectmodule.c:6:
-/Users/zhangdw/Downloads/python/jni/../src/Include/bytes_methods.h:10:18: note: expected 'const char *' but argument is of type 'int'
+In file included from /Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:7:0,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:58,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:77,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Objects/abstract.c:3:
+/Users/zhangdw/Downloads/python/jni/../src/Include/bytes_methods.h:11:18: note: expected 'const char *' but argument is of type 'int'
  extern PyObject* _Py_bytes_isalnum(const char *cptr, Py_ssize_t len);
                   ^
-In file included from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:57:0,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:85,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Modules/_bisectmodule.c:6:
+In file included from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:58:0,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:77,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Objects/abstract.c:3:
 /Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h: In function 'stringlib_isdigit':
-/Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:27:5: warning: passing argument 1 of '_Py_bytes_isdigit' makes pointer from integer without a cast [enabled by default]
+/Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:30:5: warning: passing argument 1 of '_Py_bytes_isdigit' makes pointer from integer without a cast [enabled by default]
      return _Py_bytes_isdigit(STRINGLIB_STR(self), STRINGLIB_LEN(self));
      ^
-In file included from /Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:4:0,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:57,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:85,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Modules/_bisectmodule.c:6:
-/Users/zhangdw/Downloads/python/jni/../src/Include/bytes_methods.h:11:18: note: expected 'const char *' but argument is of type 'int'
+In file included from /Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:7:0,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:58,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:77,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Objects/abstract.c:3:
+/Users/zhangdw/Downloads/python/jni/../src/Include/bytes_methods.h:12:18: note: expected 'const char *' but argument is of type 'int'
  extern PyObject* _Py_bytes_isdigit(const char *cptr, Py_ssize_t len);
                   ^
-In file included from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:57:0,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:85,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Modules/_bisectmodule.c:6:
+In file included from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:58:0,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:77,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Objects/abstract.c:3:
 /Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h: In function 'stringlib_islower':
-/Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:33:5: warning: passing argument 1 of '_Py_bytes_islower' makes pointer from integer without a cast [enabled by default]
+/Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:36:5: warning: passing argument 1 of '_Py_bytes_islower' makes pointer from integer without a cast [enabled by default]
      return _Py_bytes_islower(STRINGLIB_STR(self), STRINGLIB_LEN(self));
      ^
-In file included from /Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:4:0,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:57,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:85,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Modules/_bisectmodule.c:6:
-/Users/zhangdw/Downloads/python/jni/../src/Include/bytes_methods.h:12:18: note: expected 'const char *' but argument is of type 'int'
+In file included from /Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:7:0,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:58,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:77,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Objects/abstract.c:3:
+/Users/zhangdw/Downloads/python/jni/../src/Include/bytes_methods.h:13:18: note: expected 'const char *' but argument is of type 'int'
  extern PyObject* _Py_bytes_islower(const char *cptr, Py_ssize_t len);
                   ^
-In file included from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:57:0,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:85,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Modules/_bisectmodule.c:6:
+In file included from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:58:0,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:77,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Objects/abstract.c:3:
 /Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h: In function 'stringlib_isupper':
-/Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:39:5: warning: passing argument 1 of '_Py_bytes_isupper' makes pointer from integer without a cast [enabled by default]
+/Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:42:5: warning: passing argument 1 of '_Py_bytes_isupper' makes pointer from integer without a cast [enabled by default]
      return _Py_bytes_isupper(STRINGLIB_STR(self), STRINGLIB_LEN(self));
      ^
-In file included from /Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:4:0,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:57,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:85,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Modules/_bisectmodule.c:6:
-/Users/zhangdw/Downloads/python/jni/../src/Include/bytes_methods.h:13:18: note: expected 'const char *' but argument is of type 'int'
+In file included from /Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:7:0,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:58,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:77,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Objects/abstract.c:3:
+/Users/zhangdw/Downloads/python/jni/../src/Include/bytes_methods.h:14:18: note: expected 'const char *' but argument is of type 'int'
  extern PyObject* _Py_bytes_isupper(const char *cptr, Py_ssize_t len);
                   ^
-In file included from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:57:0,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:85,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Modules/_bisectmodule.c:6:
+In file included from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:58:0,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:77,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Objects/abstract.c:3:
 /Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h: In function 'stringlib_istitle':
-/Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:45:5: warning: passing argument 1 of '_Py_bytes_istitle' makes pointer from integer without a cast [enabled by default]
+/Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:48:5: warning: passing argument 1 of '_Py_bytes_istitle' makes pointer from integer without a cast [enabled by default]
      return _Py_bytes_istitle(STRINGLIB_STR(self), STRINGLIB_LEN(self));
      ^
-In file included from /Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:4:0,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:57,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:85,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Modules/_bisectmodule.c:6:
-/Users/zhangdw/Downloads/python/jni/../src/Include/bytes_methods.h:14:18: note: expected 'const char *' but argument is of type 'int'
+In file included from /Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:7:0,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:58,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:77,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Objects/abstract.c:3:
+/Users/zhangdw/Downloads/python/jni/../src/Include/bytes_methods.h:15:18: note: expected 'const char *' but argument is of type 'int'
  extern PyObject* _Py_bytes_istitle(const char *cptr, Py_ssize_t len);
                   ^
-In file included from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:57:0,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:85,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Modules/_bisectmodule.c:6:
+In file included from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:58:0,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:77,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Objects/abstract.c:3:
 /Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h: In function 'stringlib_lower':
-/Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:55:12: warning: assignment makes pointer from integer without a cast [enabled by default]
+/Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:58:12: warning: assignment makes pointer from integer without a cast [enabled by default]
      newobj = STRINGLIB_NEW(NULL, STRINGLIB_LEN(self));
             ^
-/Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:59:18: warning: passing argument 1 of '_Py_bytes_lower' makes pointer from integer without a cast [enabled by default]
+/Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:62:18: warning: passing argument 1 of '_Py_bytes_lower' makes pointer from integer without a cast [enabled by default]
                   STRINGLIB_LEN(self));
                   ^
-In file included from /Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:4:0,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:57,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:85,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Modules/_bisectmodule.c:6:
-/Users/zhangdw/Downloads/python/jni/../src/Include/bytes_methods.h:17:13: note: expected 'char *' but argument is of type 'int'
- extern void _Py_bytes_lower(char *result, const char *cptr, Py_ssize_t len);
-             ^
-In file included from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:57:0,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:85,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Modules/_bisectmodule.c:6:
-/Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:59:18: warning: passing argument 2 of '_Py_bytes_lower' makes pointer from integer without a cast [enabled by default]
-                  STRINGLIB_LEN(self));
-                  ^
-In file included from /Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:4:0,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:57,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:85,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Modules/_bisectmodule.c:6:
-/Users/zhangdw/Downloads/python/jni/../src/Include/bytes_methods.h:17:13: note: expected 'const char *' but argument is of type 'int'
- extern void _Py_bytes_lower(char *result, const char *cptr, Py_ssize_t len);
-             ^
-In file included from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:57:0,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:85,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Modules/_bisectmodule.c:6:
-/Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h: In function 'stringlib_upper':
-/Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:67:12: warning: assignment makes pointer from integer without a cast [enabled by default]
-     newobj = STRINGLIB_NEW(NULL, STRINGLIB_LEN(self));
-            ^
-/Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:71:18: warning: passing argument 1 of '_Py_bytes_upper' makes pointer from integer without a cast [enabled by default]
-                  STRINGLIB_LEN(self));
-                  ^
-In file included from /Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:4:0,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:57,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:85,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Modules/_bisectmodule.c:6:
+In file included from /Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:7:0,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:58,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:77,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Objects/abstract.c:3:
 /Users/zhangdw/Downloads/python/jni/../src/Include/bytes_methods.h:18:13: note: expected 'char *' but argument is of type 'int'
- extern void _Py_bytes_upper(char *result, const char *cptr, Py_ssize_t len);
+ extern void _Py_bytes_lower(char *result, const char *cptr, Py_ssize_t len);
              ^
-In file included from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:57:0,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:85,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Modules/_bisectmodule.c:6:
-/Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:71:18: warning: passing argument 2 of '_Py_bytes_upper' makes pointer from integer without a cast [enabled by default]
+In file included from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:58:0,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:77,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Objects/abstract.c:3:
+/Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:62:18: warning: passing argument 2 of '_Py_bytes_lower' makes pointer from integer without a cast [enabled by default]
                   STRINGLIB_LEN(self));
                   ^
-In file included from /Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:4:0,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:57,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:85,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Modules/_bisectmodule.c:6:
+In file included from /Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:7:0,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:58,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:77,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Objects/abstract.c:3:
 /Users/zhangdw/Downloads/python/jni/../src/Include/bytes_methods.h:18:13: note: expected 'const char *' but argument is of type 'int'
+ extern void _Py_bytes_lower(char *result, const char *cptr, Py_ssize_t len);
+             ^
+In file included from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:58:0,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:77,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Objects/abstract.c:3:
+/Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h: In function 'stringlib_upper':
+/Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:70:12: warning: assignment makes pointer from integer without a cast [enabled by default]
+     newobj = STRINGLIB_NEW(NULL, STRINGLIB_LEN(self));
+            ^
+/Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:74:18: warning: passing argument 1 of '_Py_bytes_upper' makes pointer from integer without a cast [enabled by default]
+                  STRINGLIB_LEN(self));
+                  ^
+In file included from /Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:7:0,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:58,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:77,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Objects/abstract.c:3:
+/Users/zhangdw/Downloads/python/jni/../src/Include/bytes_methods.h:19:13: note: expected 'char *' but argument is of type 'int'
  extern void _Py_bytes_upper(char *result, const char *cptr, Py_ssize_t len);
              ^
-In file included from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:57:0,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:85,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Modules/_bisectmodule.c:6:
+In file included from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:58:0,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:77,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Objects/abstract.c:3:
+/Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:74:18: warning: passing argument 2 of '_Py_bytes_upper' makes pointer from integer without a cast [enabled by default]
+                  STRINGLIB_LEN(self));
+                  ^
+In file included from /Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:7:0,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:58,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:77,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Objects/abstract.c:3:
+/Users/zhangdw/Downloads/python/jni/../src/Include/bytes_methods.h:19:13: note: expected 'const char *' but argument is of type 'int'
+ extern void _Py_bytes_upper(char *result, const char *cptr, Py_ssize_t len);
+             ^
+In file included from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:58:0,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:77,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Objects/abstract.c:3:
 /Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h: In function 'stringlib_title':
-/Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:79:12: warning: assignment makes pointer from integer without a cast [enabled by default]
+/Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:82:12: warning: assignment makes pointer from integer without a cast [enabled by default]
      newobj = STRINGLIB_NEW(NULL, STRINGLIB_LEN(self));
             ^
-/Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:83:18: warning: passing argument 1 of '_Py_bytes_title' makes pointer from integer without a cast [enabled by default]
+/Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:86:18: warning: passing argument 1 of '_Py_bytes_title' makes pointer from integer without a cast [enabled by default]
                   STRINGLIB_LEN(self));
                   ^
-In file included from /Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:4:0,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:57,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:85,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Modules/_bisectmodule.c:6:
-/Users/zhangdw/Downloads/python/jni/../src/Include/bytes_methods.h:19:13: note: expected 'char *' but argument is of type 'int'
+In file included from /Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:7:0,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:58,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:77,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Objects/abstract.c:3:
+/Users/zhangdw/Downloads/python/jni/../src/Include/bytes_methods.h:20:13: note: expected 'char *' but argument is of type 'int'
  extern void _Py_bytes_title(char *result, char *s, Py_ssize_t len);
              ^
-In file included from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:57:0,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:85,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Modules/_bisectmodule.c:6:
-/Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:83:18: warning: passing argument 2 of '_Py_bytes_title' makes pointer from integer without a cast [enabled by default]
+In file included from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:58:0,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:77,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Objects/abstract.c:3:
+/Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:86:18: warning: passing argument 2 of '_Py_bytes_title' makes pointer from integer without a cast [enabled by default]
                   STRINGLIB_LEN(self));
                   ^
-In file included from /Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:4:0,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:57,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:85,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Modules/_bisectmodule.c:6:
-/Users/zhangdw/Downloads/python/jni/../src/Include/bytes_methods.h:19:13: note: expected 'char *' but argument is of type 'int'
+In file included from /Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:7:0,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:58,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:77,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Objects/abstract.c:3:
+/Users/zhangdw/Downloads/python/jni/../src/Include/bytes_methods.h:20:13: note: expected 'char *' but argument is of type 'int'
  extern void _Py_bytes_title(char *result, char *s, Py_ssize_t len);
              ^
-In file included from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:57:0,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:85,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Modules/_bisectmodule.c:6:
+In file included from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:58:0,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:77,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Objects/abstract.c:3:
 /Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h: In function 'stringlib_capitalize':
-/Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:91:12: warning: assignment makes pointer from integer without a cast [enabled by default]
+/Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:94:12: warning: assignment makes pointer from integer without a cast [enabled by default]
      newobj = STRINGLIB_NEW(NULL, STRINGLIB_LEN(self));
             ^
-/Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:95:23: warning: passing argument 1 of '_Py_bytes_capitalize' makes pointer from integer without a cast [enabled by default]
+/Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:98:23: warning: passing argument 1 of '_Py_bytes_capitalize' makes pointer from integer without a cast [enabled by default]
                        STRINGLIB_LEN(self));
                        ^
-In file included from /Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:4:0,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:57,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:85,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Modules/_bisectmodule.c:6:
-/Users/zhangdw/Downloads/python/jni/../src/Include/bytes_methods.h:20:13: note: expected 'char *' but argument is of type 'int'
+In file included from /Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:7:0,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:58,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:77,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Objects/abstract.c:3:
+/Users/zhangdw/Downloads/python/jni/../src/Include/bytes_methods.h:21:13: note: expected 'char *' but argument is of type 'int'
  extern void _Py_bytes_capitalize(char *result, char *s, Py_ssize_t len);
              ^
-In file included from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:57:0,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:85,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Modules/_bisectmodule.c:6:
-/Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:95:23: warning: passing argument 2 of '_Py_bytes_capitalize' makes pointer from integer without a cast [enabled by default]
+In file included from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:58:0,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:77,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Objects/abstract.c:3:
+/Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:98:23: warning: passing argument 2 of '_Py_bytes_capitalize' makes pointer from integer without a cast [enabled by default]
                        STRINGLIB_LEN(self));
                        ^
-In file included from /Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:4:0,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:57,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:85,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Modules/_bisectmodule.c:6:
-/Users/zhangdw/Downloads/python/jni/../src/Include/bytes_methods.h:20:13: note: expected 'char *' but argument is of type 'int'
+In file included from /Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:7:0,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:58,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:77,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Objects/abstract.c:3:
+/Users/zhangdw/Downloads/python/jni/../src/Include/bytes_methods.h:21:13: note: expected 'char *' but argument is of type 'int'
  extern void _Py_bytes_capitalize(char *result, char *s, Py_ssize_t len);
              ^
-In file included from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:57:0,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:85,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Modules/_bisectmodule.c:6:
+In file included from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:58:0,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:77,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Objects/abstract.c:3:
 /Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h: In function 'stringlib_swapcase':
-/Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:103:12: warning: assignment makes pointer from integer without a cast [enabled by default]
+/Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:106:12: warning: assignment makes pointer from integer without a cast [enabled by default]
      newobj = STRINGLIB_NEW(NULL, STRINGLIB_LEN(self));
             ^
-/Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:107:21: warning: passing argument 1 of '_Py_bytes_swapcase' makes pointer from integer without a cast [enabled by default]
+/Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:110:21: warning: passing argument 1 of '_Py_bytes_swapcase' makes pointer from integer without a cast [enabled by default]
                      STRINGLIB_LEN(self));
                      ^
-In file included from /Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:4:0,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:57,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:85,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Modules/_bisectmodule.c:6:
-/Users/zhangdw/Downloads/python/jni/../src/Include/bytes_methods.h:21:13: note: expected 'char *' but argument is of type 'int'
+In file included from /Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:7:0,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:58,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:77,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Objects/abstract.c:3:
+/Users/zhangdw/Downloads/python/jni/../src/Include/bytes_methods.h:22:13: note: expected 'char *' but argument is of type 'int'
  extern void _Py_bytes_swapcase(char *result, char *s, Py_ssize_t len);
              ^
-In file included from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:57:0,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:85,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Modules/_bisectmodule.c:6:
-/Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:107:21: warning: passing argument 2 of '_Py_bytes_swapcase' makes pointer from integer without a cast [enabled by default]
+In file included from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:58:0,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:77,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Objects/abstract.c:3:
+/Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:110:21: warning: passing argument 2 of '_Py_bytes_swapcase' makes pointer from integer without a cast [enabled by default]
                      STRINGLIB_LEN(self));
                      ^
-In file included from /Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:4:0,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:57,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:85,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Modules/_bisectmodule.c:6:
-/Users/zhangdw/Downloads/python/jni/../src/Include/bytes_methods.h:21:13: note: expected 'char *' but argument is of type 'int'
+In file included from /Users/zhangdw/Downloads/python/jni/../src/Objects/stringlib/ctype.h:7:0,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Include/unicodeobject.h:58,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:77,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Objects/abstract.c:3:
+/Users/zhangdw/Downloads/python/jni/../src/Include/bytes_methods.h:22:13: note: expected 'char *' but argument is of type 'int'
  extern void _Py_bytes_swapcase(char *result, char *s, Py_ssize_t len);
              ^
-In file included from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:86:0,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Modules/_bisectmodule.c:6:
-/Users/zhangdw/Downloads/python/jni/../src/Include/intobject.h: At top level:
-/Users/zhangdw/Downloads/python/jni/../src/Include/intobject.h:46:35: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PyInt_AsUnsignedLongLongMask'
- PyAPI_FUNC(unsigned PY_LONG_LONG) PyInt_AsUnsignedLongLongMask(PyObject *);
-                                   ^
-In file included from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:88:0,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Modules/_bisectmodule.c:6:
-/Users/zhangdw/Downloads/python/jni/../src/Include/longobject.h:50:1: warning: parameter names (without types) in function declaration [enabled by default]
- PyAPI_FUNC(PyObject *) PyLong_FromLongLong(PY_LONG_LONG);
- ^
-In file included from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:58:0,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Modules/_bisectmodule.c:6:
-/Users/zhangdw/Downloads/python/jni/../src/Include/pyconfig.h:314:23: error: unknown type name '__int64'
- # define PY_LONG_LONG __int64
-                       ^
-/Users/zhangdw/Downloads/python/jni/../src/Include/pyport.h:793:34: note: in definition of macro 'PyAPI_FUNC'
- #       define PyAPI_FUNC(RTYPE) RTYPE
-                                  ^
-/Users/zhangdw/Downloads/python/jni/../src/Include/longobject.h:52:12: note: in expansion of macro 'PY_LONG_LONG'
- PyAPI_FUNC(PY_LONG_LONG) PyLong_AsLongLong(PyObject *);
-            ^
-In file included from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:88:0,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Modules/_bisectmodule.c:6:
-/Users/zhangdw/Downloads/python/jni/../src/Include/longobject.h:53:35: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PyLong_AsUnsignedLongLong'
- PyAPI_FUNC(unsigned PY_LONG_LONG) PyLong_AsUnsignedLongLong(PyObject *);
-                                   ^
-/Users/zhangdw/Downloads/python/jni/../src/Include/longobject.h:54:35: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PyLong_AsUnsignedLongLongMask'
- PyAPI_FUNC(unsigned PY_LONG_LONG) PyLong_AsUnsignedLongLongMask(PyObject *);
-                                   ^
-In file included from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:58:0,
-                 from /Users/zhangdw/Downloads/python/jni/../src/Modules/_bisectmodule.c:6:
-/Users/zhangdw/Downloads/python/jni/../src/Include/pyconfig.h:314:23: error: unknown type name '__int64'
- # define PY_LONG_LONG __int64
-                       ^
-/Users/zhangdw/Downloads/python/jni/../src/Include/pyport.h:793:34: note: in definition of macro 'PyAPI_FUNC'
- #       define PyAPI_FUNC(RTYPE) RTYPE
-                                  ^
-/Users/zhangdw/Downloads/python/jni/../src/Include/longobject.h:55:12: note: in expansion of macro 'PY_LONG_LONG'
- PyAPI_FUNC(PY_LONG_LONG) PyLong_AsLongLongAndOverflow(PyObject *, int *);
-            ^
-make: *** [/Users/zhangdw/Downloads/python/obj/local/armeabi/objs/protobuf//Users/zhangdw/Downloads/python/jni/__/src/Modules/_bisectmodule.o] Error 1
+/Users/zhangdw/Downloads/python/jni/../src/Objects/abstract.c: In function 'objargs_mktuple':
+/Users/zhangdw/Downloads/python/jni/../src/Objects/abstract.c:2358:9: error: incompatible type for argument 1 of 'memcpy'
+         Py_VA_COPY(countva, va);
+         ^
+In file included from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:30:0,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Objects/abstract.c:3:
+/Users/zhangdw/Documents/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/string.h:41:15: note: expected 'void *' but argument is of type 'va_list'
+ extern void*  memcpy(void *, const void *, size_t);
+               ^
+/Users/zhangdw/Downloads/python/jni/../src/Objects/abstract.c:2358:9: error: incompatible type for argument 2 of 'memcpy'
+         Py_VA_COPY(countva, va);
+         ^
+In file included from /Users/zhangdw/Downloads/python/jni/../src/Include/Python.h:30:0,
+                 from /Users/zhangdw/Downloads/python/jni/../src/Objects/abstract.c:3:
+/Users/zhangdw/Documents/android-ndk-r10d/platforms/android-19/arch-arm/usr/include/string.h:41:15: note: expected 'const void *' but argument is of type 'va_list'
+ extern void*  memcpy(void *, const void *, size_t);
+               ^
+make: *** [/Users/zhangdw/Downloads/python/obj/local/armeabi/objs/protobuf//Users/zhangdw/Downloads/python/jni/__/src/Objects/abstract.o] Error 1
