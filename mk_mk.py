@@ -12,7 +12,10 @@ LOCAL_MODULE_FILENAME := libprotobuf
 LOCAL_SRC_FILES := $(ALL_SRC_FILE)
 
 #$(LOCAL_PATH)/../src/Include
-LOCAL_C_INCLUDES := $(ALL_HEADER_DIR)
+LOCAL_C_INCLUDES := $(LOCAL_PATH)/../src/Include \\
+$(LOCAL_PATH)/../src/Objects \\
+$(LOCAL_PATH)/../src/Parser \\
+$(LOCAL_PATH)/../src/Python
 
 include $(BUILD_STATIC_LIBRARY)
 

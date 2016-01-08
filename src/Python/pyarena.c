@@ -1,4 +1,5 @@
 #include "Python.h"
+#include "pyarena.h"
 
 /* A simple arena block structure.
 
@@ -12,6 +13,8 @@
 
 #define DEFAULT_BLOCK_SIZE 8192
 #define ALIGNMENT               8
+#define ALIGNMENT_MASK          (ALIGNMENT - 1)
+#define ROUNDUP(x)              (((x) + ALIGNMENT_MASK) & ~ALIGNMENT_MASK)
 
 typedef struct _block {
     /* Total number of bytes owned by this block available to pass out.
@@ -77,14 +80,14 @@ block_new(size_t size)
 {
     /* Allocate header and block as one unit.
        ab_mem points just past header. */
-    block *b = (block *)PyMem_Malloc(sizeof(block) + size);
+    block *b = (block *)malloc(sizeof(block) + size);
     if (!b)
         return NULL;
     b->ab_size = size;
     b->ab_mem = (void *)(b + 1);
     b->ab_next = NULL;
-    b->ab_offset = (char *)_Py_ALIGN_UP(b->ab_mem, ALIGNMENT) -
-            (char *)(b->ab_mem);
+    b->ab_offset = ROUNDUP((Py_uintptr_t)(b->ab_mem)) -
+      (Py_uintptr_t)(b->ab_mem);
     return b;
 }
 
@@ -92,7 +95,7 @@ static void
 block_free(block *b) {
     while (b) {
         block *next = b->ab_next;
-        PyMem_Free(b);
+        free(b);
         b = next;
     }
 }
@@ -102,7 +105,7 @@ block_alloc(block *b, size_t size)
 {
     void *p;
     assert(b);
-    size = _Py_SIZE_ROUND_UP(size, ALIGNMENT);
+    size = ROUNDUP(size);
     if (b->ab_offset + size > b->ab_size) {
         /* If we need to allocate more memory than will fit in
            the default block, allocate a one-off block that is
@@ -127,20 +130,20 @@ block_alloc(block *b, size_t size)
 PyArena *
 PyArena_New()
 {
-    PyArena* arena = (PyArena *)PyMem_Malloc(sizeof(PyArena));
+    PyArena* arena = (PyArena *)malloc(sizeof(PyArena));
     if (!arena)
         return (PyArena*)PyErr_NoMemory();
 
     arena->a_head = block_new(DEFAULT_BLOCK_SIZE);
     arena->a_cur = arena->a_head;
     if (!arena->a_head) {
-        PyMem_Free((void *)arena);
+        free((void *)arena);
         return (PyArena*)PyErr_NoMemory();
     }
     arena->a_objects = PyList_New(0);
     if (!arena->a_objects) {
         block_free(arena->a_head);
-        PyMem_Free((void *)arena);
+        free((void *)arena);
         return (PyArena*)PyErr_NoMemory();
     }
 #if defined(Py_DEBUG)
@@ -173,7 +176,7 @@ PyArena_Free(PyArena *arena)
     */
 
     Py_DECREF(arena->a_objects);
-    PyMem_Free(arena);
+    free(arena);
 }
 
 void *

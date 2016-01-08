@@ -5,62 +5,64 @@
    shared code in bytes_methods.c to cut down on duplicate code bloat.  */
 
 PyDoc_STRVAR(expandtabs__doc__,
-"B.expandtabs(tabsize=8) -> copy of B\n\
+"B.expandtabs([tabsize]) -> copy of B\n\
 \n\
 Return a copy of B where all tab characters are expanded using spaces.\n\
 If tabsize is not given, a tab size of 8 characters is assumed.");
 
 static PyObject*
-stringlib_expandtabs(PyObject *self, PyObject *args, PyObject *kwds)
+stringlib_expandtabs(PyObject *self, PyObject *args)
 {
     const char *e, *p;
     char *q;
-    Py_ssize_t i, j;
+    size_t i, j;
     PyObject *u;
-    static char *kwlist[] = {"tabsize", 0};
     int tabsize = 8;
-
-    if (!PyArg_ParseTupleAndKeywords(args, kwds, "|i:expandtabs",
-                                     kwlist, &tabsize))
+    
+    if (!PyArg_ParseTuple(args, "|i:expandtabs", &tabsize))
         return NULL;
-
+    
     /* First pass: determine size of output string */
     i = j = 0;
     e = STRINGLIB_STR(self) + STRINGLIB_LEN(self);
-    for (p = STRINGLIB_STR(self); p < e; p++) {
+    for (p = STRINGLIB_STR(self); p < e; p++)
         if (*p == '\t') {
             if (tabsize > 0) {
-                Py_ssize_t incr = tabsize - (j % tabsize);
-                if (j > PY_SSIZE_T_MAX - incr)
-                    goto overflow;
-                j += incr;
+                j += tabsize - (j % tabsize);
+                if (j > PY_SSIZE_T_MAX) {
+                    PyErr_SetString(PyExc_OverflowError,
+                                    "result is too long");
+                    return NULL;
+                }
             }
         }
         else {
-            if (j > PY_SSIZE_T_MAX - 1)
-                goto overflow;
             j++;
             if (*p == '\n' || *p == '\r') {
-                if (i > PY_SSIZE_T_MAX - j)
-                    goto overflow;
                 i += j;
                 j = 0;
+                if (i > PY_SSIZE_T_MAX) {
+                    PyErr_SetString(PyExc_OverflowError,
+                                    "result is too long");
+                    return NULL;
+                }
             }
         }
+    
+    if ((i + j) > PY_SSIZE_T_MAX) {
+        PyErr_SetString(PyExc_OverflowError, "result is too long");
+        return NULL;
     }
-
-    if (i > PY_SSIZE_T_MAX - j)
-        goto overflow;
-
+    
     /* Second pass: create output string and fill it */
     u = STRINGLIB_NEW(NULL, i + j);
     if (!u)
         return NULL;
-
+    
     j = 0;
     q = STRINGLIB_STR(u);
-
-    for (p = STRINGLIB_STR(self); p < e; p++) {
+    
+    for (p = STRINGLIB_STR(self); p < e; p++)
         if (*p == '\t') {
             if (tabsize > 0) {
                 i = tabsize - (j % tabsize);
@@ -75,12 +77,8 @@ stringlib_expandtabs(PyObject *self, PyObject *args, PyObject *kwds)
             if (*p == '\n' || *p == '\r')
                 j = 0;
         }
-    }
-
+    
     return u;
-  overflow:
-    PyErr_SetString(PyExc_OverflowError, "result too long");
-    return NULL;
 }
 
 Py_LOCAL_INLINE(PyObject *)

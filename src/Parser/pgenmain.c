@@ -13,8 +13,6 @@
    - check for duplicate definitions of names (instead of fatal err)
 */
 
-#define PGEN
-
 #include "Python.h"
 #include "pgenheaders.h"
 #include "grammar.h"
@@ -28,8 +26,6 @@ int Py_IgnoreEnvironmentFlag;
 
 /* Forward */
 grammar *getgrammar(char *filename);
-
-void Py_Exit(int) _Py_NO_RETURN;
 
 void
 Py_Exit(int sts)
@@ -96,11 +92,10 @@ getgrammar(char *filename)
         fprintf(stderr, "Parsing error %d, line %d.\n",
             err.error, err.lineno);
         if (err.text != NULL) {
-            size_t len;
-            int i;
+            size_t i;
             fprintf(stderr, "%s", err.text);
-            len = strlen(err.text);
-            if (len == 0 || err.text[len-1] != '\n')
+            i = strlen(err.text);
+            if (i == 0 || err.text[i-1] != '\n')
                 fprintf(stderr, "\n");
             for (i = 0; i < err.offset; i++) {
                 if (err.text[i] == '\t')
@@ -114,7 +109,6 @@ getgrammar(char *filename)
         Py_Exit(1);
     }
     g = pgen(n);
-    PyNode_Free(n);
     if (g == NULL) {
         printf("Bad grammar.\n");
         Py_Exit(1);
@@ -139,7 +133,7 @@ Py_FatalError(const char *msg)
 /* No-nonsense my_readline() for tokenizer.c */
 
 char *
-PyOS_Readline(FILE *sys_stdin, FILE *sys_stdout, const char *prompt)
+PyOS_Readline(FILE *sys_stdin, FILE *sys_stdout, char *prompt)
 {
     size_t n = 1000;
     char *p = (char *)PyMem_MALLOC(n);
