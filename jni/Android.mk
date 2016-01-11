@@ -4,10 +4,14 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
-LOCAL_MODULE := libprotobuf
-LOCAL_MODULE_FILENAME := libprotobuf
+LOCAL_MODULE := libpython
+LOCAL_MODULE_FILENAME := libpython
 
-LOCAL_SRC_FILES := $(LOCAL_PATH)/../src/Objects/abstract.c \
+LOCAL_SRC_FILES := $(LOCAL_PATH)/../src/Modules/config.c \
+$(LOCAL_PATH)/../src/Modules/gcmodule.c \
+$(LOCAL_PATH)/../src/Modules/getbuildinfo.c \
+$(LOCAL_PATH)/../src/Modules/getpath.c \
+$(LOCAL_PATH)/../src/Objects/abstract.c \
 $(LOCAL_PATH)/../src/Objects/boolobject.c \
 $(LOCAL_PATH)/../src/Objects/bufferobject.c \
 $(LOCAL_PATH)/../src/Objects/bytearrayobject.c \
@@ -59,10 +63,8 @@ $(LOCAL_PATH)/../src/Parser/node.c \
 $(LOCAL_PATH)/../src/Parser/parser.c \
 $(LOCAL_PATH)/../src/Parser/parsetok.c \
 $(LOCAL_PATH)/../src/Parser/pgen.c \
-$(LOCAL_PATH)/../src/Parser/pgenmain.c \
 $(LOCAL_PATH)/../src/Parser/printgrammar.c \
 $(LOCAL_PATH)/../src/Parser/tokenizer.c \
-$(LOCAL_PATH)/../src/Parser/tokenizer_pgen.c \
 $(LOCAL_PATH)/../src/Python/_warnings.c \
 $(LOCAL_PATH)/../src/Python/asdl.c \
 $(LOCAL_PATH)/../src/Python/ast.c \
@@ -88,7 +90,6 @@ $(LOCAL_PATH)/../src/Python/getplatform.c \
 $(LOCAL_PATH)/../src/Python/getversion.c \
 $(LOCAL_PATH)/../src/Python/graminit.c \
 $(LOCAL_PATH)/../src/Python/import.c \
-$(LOCAL_PATH)/../src/Python/importdl.c \
 $(LOCAL_PATH)/../src/Python/marshal.c \
 $(LOCAL_PATH)/../src/Python/modsupport.c \
 $(LOCAL_PATH)/../src/Python/mysnprintf.c \
@@ -118,5 +119,5 @@ $(LOCAL_PATH)/../src/Objects \
 $(LOCAL_PATH)/../src/Parser \
 $(LOCAL_PATH)/../src/Python
 
-include $(BUILD_STATIC_LIBRARY)
+include $(BUILD_SHARED_LIBRARY)
 

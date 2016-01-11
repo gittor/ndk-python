@@ -48,7 +48,7 @@ PC:Apple-10.9.5, Python-2.7.5
 
 	错误: dynload_aix.c:11:21 找不到sys/ldr.h
 	原因: 这个文件是用来在python中导入aix格式的C库的，由于用不到，所以直接删掉
-	解决: 删掉dynload_*.c，这是一系列通类型的文件
+	解决: 删掉dynload_*.c，这是一系列相同类型的文件
 
 	错误: mactoolboxglue.c:27:0 找不到Carbon/Carbon.h
 	原因: 不知道原因，但mactoolboxglue.c看起来没什么用
@@ -65,6 +65,26 @@ PC:Apple-10.9.5, Python-2.7.5
 	错误: strtod.c errno的定义与ndk冲突
 	原因: 不知道
 	解决: 删掉strtod.c里面的extern  int     errno;
+
+	错误: multiple definition of 'PyOS_Readline'
+	原因: pgenmain多定义了一次
+	解决: 删掉pgenmain.c,pgen_tokenizer.c
+
+	错误: 一些链接错误
+	原因: 缺少某些Modules文件
+	解决: 拷贝gcmodule.c, getbuildinfo.c, 到Modules
+
+	错误: 一些链接错误
+	原因: 加载C动态库的功能出错了,由于不需要在python代码里加载C库，所以直接删掉
+	解决: 删掉importdl.c, 删掉pyconfig.h里面HAVE_DYNAMIC_LOADING
+
+	错误: 一些链接错误
+	原因: 没有python默认加载哪些模块的配置了
+	解决: 拷贝config.c到Modules，config.c配置的大多是Modules里面的模块，由于没有编译Modules，所以删掉config.c里面的Modules相关配置
+
+	错误: 
+	原因: 
+	解决: 
 
 	错误: 剩下一些警告
 	原因: 位操作可能越界，不知道为什么，无法解决。

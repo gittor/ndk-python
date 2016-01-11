@@ -6,8 +6,8 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
-LOCAL_MODULE := libprotobuf
-LOCAL_MODULE_FILENAME := libprotobuf
+LOCAL_MODULE := libpython
+LOCAL_MODULE_FILENAME := libpython
 
 LOCAL_SRC_FILES := $(ALL_SRC_FILE)
 
@@ -17,7 +17,7 @@ $(LOCAL_PATH)/../src/Objects \\
 $(LOCAL_PATH)/../src/Parser \\
 $(LOCAL_PATH)/../src/Python
 
-include $(BUILD_STATIC_LIBRARY)
+include $(BUILD_SHARED_LIBRARY)
 
 '''
 

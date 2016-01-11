@@ -1,150 +1,119 @@
-[armeabi] Compile thumb  : protobuf <= test.c
-[armeabi] Compile thumb  : protobuf <= hashtable.c
-[armeabi] Compile thumb  : protobuf <= abstract.c
-[armeabi] Compile thumb  : protobuf <= accu.c
-[armeabi] Compile thumb  : protobuf <= boolobject.c
-[armeabi] Compile thumb  : protobuf <= bytearrayobject.c
-[armeabi] Compile thumb  : protobuf <= bytes_methods.c
-[armeabi] Compile thumb  : protobuf <= bytesobject.c
-[armeabi] Compile thumb  : protobuf <= capsule.c
-[armeabi] Compile thumb  : protobuf <= cellobject.c
-[armeabi] Compile thumb  : protobuf <= classobject.c
-[armeabi] Compile thumb  : protobuf <= codeobject.c
-[armeabi] Compile thumb  : protobuf <= complexobject.c
-[armeabi] Compile thumb  : protobuf <= descrobject.c
-[armeabi] Compile thumb  : protobuf <= dictobject.c
-[armeabi] Compile thumb  : protobuf <= enumobject.c
-[armeabi] Compile thumb  : protobuf <= exceptions.c
-[armeabi] Compile thumb  : protobuf <= fileobject.c
-[armeabi] Compile thumb  : protobuf <= floatobject.c
-[armeabi] Compile thumb  : protobuf <= frameobject.c
-[armeabi] Compile thumb  : protobuf <= funcobject.c
-[armeabi] Compile thumb  : protobuf <= genobject.c
-[armeabi] Compile thumb  : protobuf <= iterobject.c
-[armeabi] Compile thumb  : protobuf <= listobject.c
-[armeabi] Compile thumb  : protobuf <= longobject.c
-/Users/zhangdw/Downloads/python/jni/../src/Objects/longobject.c: In function 'PyLong_AsVoidPtr':
-/Users/zhangdw/Downloads/python/jni/../src/Objects/longobject.c:1037:12: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+[armeabi] Compile thumb  : python <= config.c
+[armeabi] Compile thumb  : python <= gcmodule.c
+[armeabi] Compile thumb  : python <= getbuildinfo.c
+[armeabi] Compile thumb  : python <= getpath.c
+[armeabi] Compile thumb  : python <= abstract.c
+[armeabi] Compile thumb  : python <= boolobject.c
+[armeabi] Compile thumb  : python <= bufferobject.c
+[armeabi] Compile thumb  : python <= bytearrayobject.c
+[armeabi] Compile thumb  : python <= bytes_methods.c
+[armeabi] Compile thumb  : python <= capsule.c
+[armeabi] Compile thumb  : python <= cellobject.c
+[armeabi] Compile thumb  : python <= classobject.c
+[armeabi] Compile thumb  : python <= cobject.c
+[armeabi] Compile thumb  : python <= codeobject.c
+[armeabi] Compile thumb  : python <= complexobject.c
+[armeabi] Compile thumb  : python <= descrobject.c
+[armeabi] Compile thumb  : python <= dictobject.c
+[armeabi] Compile thumb  : python <= enumobject.c
+[armeabi] Compile thumb  : python <= exceptions.c
+[armeabi] Compile thumb  : python <= fileobject.c
+[armeabi] Compile thumb  : python <= floatobject.c
+[armeabi] Compile thumb  : python <= frameobject.c
+[armeabi] Compile thumb  : python <= funcobject.c
+[armeabi] Compile thumb  : python <= genobject.c
+[armeabi] Compile thumb  : python <= intobject.c
+[armeabi] Compile thumb  : python <= iterobject.c
+[armeabi] Compile thumb  : python <= listobject.c
+[armeabi] Compile thumb  : python <= longobject.c
+/Users/zhangdw/Downloads/ndk-python/jni/../src/Objects/longobject.c: In function 'PyLong_FromVoidPtr':
+/Users/zhangdw/Downloads/ndk-python/jni/../src/Objects/longobject.c:787:40: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+     return PyLong_FromUnsignedLongLong((unsigned PY_LONG_LONG)p);
+                                        ^
+/Users/zhangdw/Downloads/ndk-python/jni/../src/Objects/longobject.c: In function 'PyLong_AsVoidPtr':
+/Users/zhangdw/Downloads/ndk-python/jni/../src/Objects/longobject.c:831:12: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
      return (void *)x;
             ^
-/Users/zhangdw/Downloads/python/jni/../src/Objects/longobject.c: In function 'long_hash':
-/Users/zhangdw/Downloads/python/jni/../src/Objects/longobject.c:2834:9: warning: left shift count >= width of type [enabled by default]
-         x = ((x << PyLong_SHIFT) & _PyHASH_MODULUS) |
-         ^
-/Users/zhangdw/Downloads/python/jni/../src/Objects/longobject.c:2835:13: warning: right shift count >= width of type [enabled by default]
-             (x >> (_PyHASH_BITS - PyLong_SHIFT));
-             ^
-/Users/zhangdw/Downloads/python/jni/../src/Objects/longobject.c:2837:9: warning: left shift count >= width of type [enabled by default]
-         if (x >= _PyHASH_MODULUS)
-         ^
-/Users/zhangdw/Downloads/python/jni/../src/Objects/longobject.c:2838:13: warning: left shift count >= width of type [enabled by default]
-             x -= _PyHASH_MODULUS;
-             ^
-[armeabi] Compile thumb  : protobuf <= memoryobject.c
-[armeabi] Compile thumb  : protobuf <= methodobject.c
-[armeabi] Compile thumb  : protobuf <= moduleobject.c
-[armeabi] Compile thumb  : protobuf <= namespaceobject.c
-[armeabi] Compile thumb  : protobuf <= object.c
-[armeabi] Compile thumb  : protobuf <= obmalloc.c
-[armeabi] Compile thumb  : protobuf <= odictobject.c
-[armeabi] Compile thumb  : protobuf <= rangeobject.c
-[armeabi] Compile thumb  : protobuf <= setobject.c
-[armeabi] Compile thumb  : protobuf <= sliceobject.c
-[armeabi] Compile thumb  : protobuf <= structseq.c
-[armeabi] Compile thumb  : protobuf <= tupleobject.c
-[armeabi] Compile thumb  : protobuf <= typeobject.c
-[armeabi] Compile thumb  : protobuf <= unicodectype.c
-[armeabi] Compile thumb  : protobuf <= unicodeobject.c
-[armeabi] Compile thumb  : protobuf <= weakrefobject.c
-[armeabi] Compile thumb  : protobuf <= acceler.c
-[armeabi] Compile thumb  : protobuf <= bitset.c
-[armeabi] Compile thumb  : protobuf <= firstsets.c
-[armeabi] Compile thumb  : protobuf <= grammar.c
-[armeabi] Compile thumb  : protobuf <= grammar1.c
-[armeabi] Compile thumb  : protobuf <= listnode.c
-[armeabi] Compile thumb  : protobuf <= metagrammar.c
-[armeabi] Compile thumb  : protobuf <= myreadline.c
-[armeabi] Compile thumb  : protobuf <= node.c
-[armeabi] Compile thumb  : protobuf <= parser.c
-[armeabi] Compile thumb  : protobuf <= parsetok.c
-[armeabi] Compile thumb  : protobuf <= parsetok_pgen.c
-[armeabi] Compile thumb  : protobuf <= pgen.c
-[armeabi] Compile thumb  : protobuf <= pgenmain.c
-[armeabi] Compile thumb  : protobuf <= printgrammar.c
-[armeabi] Compile thumb  : protobuf <= tokenizer.c
-[armeabi] Compile thumb  : protobuf <= tokenizer_pgen.c
-[armeabi] Compile thumb  : protobuf <= _warnings.c
-[armeabi] Compile thumb  : protobuf <= asdl.c
-[armeabi] Compile thumb  : protobuf <= ast.c
-[armeabi] Compile thumb  : protobuf <= bltinmodule.c
-[armeabi] Compile thumb  : protobuf <= ceval.c
-[armeabi] Compile thumb  : protobuf <= codecs.c
-[armeabi] Compile thumb  : protobuf <= compile.c
-[armeabi] Compile thumb  : protobuf <= dtoa.c
-[armeabi] Compile thumb  : protobuf <= dup2.c
-[armeabi] Compile thumb  : protobuf <= dynamic_annotations.c
-[armeabi] Compile thumb  : protobuf <= dynload_stub.c
-[armeabi] Compile thumb  : protobuf <= errors.c
-[armeabi] Compile thumb  : protobuf <= fileutils.c
-[armeabi] Compile thumb  : protobuf <= formatter_unicode.c
-[armeabi] Compile thumb  : protobuf <= frozen.c
-[armeabi] Compile thumb  : protobuf <= frozenmain.c
-[armeabi] Compile thumb  : protobuf <= future.c
-[armeabi] Compile thumb  : protobuf <= getargs.c
-[armeabi] Compile thumb  : protobuf <= getcompiler.c
-[armeabi] Compile thumb  : protobuf <= getcopyright.c
-[armeabi] Compile thumb  : protobuf <= getopt.c
-[armeabi] Compile thumb  : protobuf <= getplatform.c
-[armeabi] Compile thumb  : protobuf <= getversion.c
-[armeabi] Compile thumb  : protobuf <= graminit.c
-[armeabi] Compile thumb  : protobuf <= import.c
-[armeabi] Compile thumb  : protobuf <= importdl.c
-[armeabi] Compile thumb  : protobuf <= marshal.c
-[armeabi] Compile thumb  : protobuf <= modsupport.c
-[armeabi] Compile thumb  : protobuf <= mysnprintf.c
-[armeabi] Compile thumb  : protobuf <= mystrtoul.c
-[armeabi] Compile thumb  : protobuf <= peephole.c
-[armeabi] Compile thumb  : protobuf <= pyarena.c
-[armeabi] Compile thumb  : protobuf <= pyctype.c
-[armeabi] Compile thumb  : protobuf <= pyfpe.c
-[armeabi] Compile thumb  : protobuf <= pyhash.c
-/Users/zhangdw/Downloads/python/jni/../src/Python/pyhash.c: In function '_Py_HashDouble':
-/Users/zhangdw/Downloads/python/jni/../src/Python/pyhash.c:111:9: warning: left shift count >= width of type [enabled by default]
-         x = ((x << 28) & _PyHASH_MODULUS) | x >> (_PyHASH_BITS - 28);
-         ^
-/Users/zhangdw/Downloads/python/jni/../src/Python/pyhash.c:111:9: warning: right shift count >= width of type [enabled by default]
-/Users/zhangdw/Downloads/python/jni/../src/Python/pyhash.c:117:9: warning: left shift count >= width of type [enabled by default]
-         if (x >= _PyHASH_MODULUS)
-         ^
-/Users/zhangdw/Downloads/python/jni/../src/Python/pyhash.c:118:13: warning: left shift count >= width of type [enabled by default]
-             x -= _PyHASH_MODULUS;
-             ^
-/Users/zhangdw/Downloads/python/jni/../src/Python/pyhash.c:123:5: warning: left shift count >= width of type [enabled by default]
-     x = ((x << e) & _PyHASH_MODULUS) | x >> (_PyHASH_BITS - e);
-     ^
-/Users/zhangdw/Downloads/python/jni/../src/Python/pyhash.c: In function '_Py_HashPointer':
-/Users/zhangdw/Downloads/python/jni/../src/Python/pyhash.c:138:5: warning: left shift count >= width of type [enabled by default]
+[armeabi] Compile thumb  : python <= memoryobject.c
+[armeabi] Compile thumb  : python <= methodobject.c
+[armeabi] Compile thumb  : python <= moduleobject.c
+[armeabi] Compile thumb  : python <= object.c
+/Users/zhangdw/Downloads/ndk-python/jni/../src/Objects/object.c: In function '_Py_HashPointer':
+/Users/zhangdw/Downloads/ndk-python/jni/../src/Objects/object.c:1087:5: warning: left shift count >= width of type [enabled by default]
      y = (y >> 4) | (y << (8 * SIZEOF_VOID_P - 4));
      ^
-[armeabi] Compile thumb  : protobuf <= pylifecycle.c
-[armeabi] Compile thumb  : protobuf <= pymath.c
-[armeabi] Compile thumb  : protobuf <= pystate.c
-[armeabi] Compile thumb  : protobuf <= pystrcmp.c
-[armeabi] Compile thumb  : protobuf <= pystrhex.c
-[armeabi] Compile thumb  : protobuf <= pystrtod.c
-[armeabi] Compile thumb  : protobuf <= Python-ast.c
-[armeabi] Compile thumb  : protobuf <= pythonrun.c
-[armeabi] Compile thumb  : protobuf <= pytime.c
-[armeabi] Compile thumb  : protobuf <= random.c
-[armeabi] Compile thumb  : protobuf <= sigcheck.c
-[armeabi] Compile thumb  : protobuf <= strdup.c
-[armeabi] Compile thumb  : protobuf <= structmember.c
-[armeabi] Compile thumb  : protobuf <= symtable.c
-[armeabi] Compile thumb  : protobuf <= sysmodule.c
-/Users/zhangdw/Downloads/python/jni/../src/Python/sysmodule.c: In function 'get_hash_info':
-/Users/zhangdw/Downloads/python/jni/../src/Python/sysmodule.c:755:5: warning: left shift count >= width of type [enabled by default]
-     PyStructSequence_SET_ITEM(hash_info, field++,
-     ^
-[armeabi] Compile thumb  : protobuf <= thread.c
-[armeabi] Compile thumb  : protobuf <= traceback.c
-[armeabi] StaticLibrary  : libprotobuf.a
+[armeabi] Compile thumb  : python <= obmalloc.c
+[armeabi] Compile thumb  : python <= rangeobject.c
+[armeabi] Compile thumb  : python <= setobject.c
+[armeabi] Compile thumb  : python <= sliceobject.c
+[armeabi] Compile thumb  : python <= stringobject.c
+[armeabi] Compile thumb  : python <= structseq.c
+[armeabi] Compile thumb  : python <= tupleobject.c
+[armeabi] Compile thumb  : python <= typeobject.c
+[armeabi] Compile thumb  : python <= unicodectype.c
+[armeabi] Compile thumb  : python <= unicodeobject.c
+[armeabi] Compile thumb  : python <= weakrefobject.c
+[armeabi] Compile thumb  : python <= acceler.c
+[armeabi] Compile thumb  : python <= bitset.c
+[armeabi] Compile thumb  : python <= firstsets.c
+[armeabi] Compile thumb  : python <= grammar.c
+[armeabi] Compile thumb  : python <= grammar1.c
+[armeabi] Compile thumb  : python <= intrcheck.c
+[armeabi] Compile thumb  : python <= listnode.c
+[armeabi] Compile thumb  : python <= metagrammar.c
+[armeabi] Compile thumb  : python <= myreadline.c
+[armeabi] Compile thumb  : python <= node.c
+[armeabi] Compile thumb  : python <= parser.c
+[armeabi] Compile thumb  : python <= parsetok.c
+[armeabi] Compile thumb  : python <= pgen.c
+[armeabi] Compile thumb  : python <= printgrammar.c
+[armeabi] Compile thumb  : python <= tokenizer.c
+[armeabi] Compile thumb  : python <= _warnings.c
+[armeabi] Compile thumb  : python <= asdl.c
+[armeabi] Compile thumb  : python <= ast.c
+[armeabi] Compile thumb  : python <= atof.c
+[armeabi] Compile thumb  : python <= bltinmodule.c
+[armeabi] Compile thumb  : python <= ceval.c
+[armeabi] Compile thumb  : python <= codecs.c
+[armeabi] Compile thumb  : python <= compile.c
+[armeabi] Compile thumb  : python <= dtoa.c
+[armeabi] Compile thumb  : python <= dup2.c
+[armeabi] Compile thumb  : python <= errors.c
+[armeabi] Compile thumb  : python <= formatter_string.c
+[armeabi] Compile thumb  : python <= formatter_unicode.c
+[armeabi] Compile thumb  : python <= frozen.c
+[armeabi] Compile thumb  : python <= frozenmain.c
+[armeabi] Compile thumb  : python <= future.c
+[armeabi] Compile thumb  : python <= getargs.c
+[armeabi] Compile thumb  : python <= getcompiler.c
+[armeabi] Compile thumb  : python <= getcopyright.c
+[armeabi] Compile thumb  : python <= getcwd.c
+[armeabi] Compile thumb  : python <= getopt.c
+[armeabi] Compile thumb  : python <= getplatform.c
+[armeabi] Compile thumb  : python <= getversion.c
+[armeabi] Compile thumb  : python <= graminit.c
+[armeabi] Compile thumb  : python <= import.c
+[armeabi] Compile thumb  : python <= marshal.c
+[armeabi] Compile thumb  : python <= modsupport.c
+[armeabi] Compile thumb  : python <= mysnprintf.c
+[armeabi] Compile thumb  : python <= mystrtoul.c
+[armeabi] Compile thumb  : python <= peephole.c
+[armeabi] Compile thumb  : python <= pyarena.c
+[armeabi] Compile thumb  : python <= pyctype.c
+[armeabi] Compile thumb  : python <= pyfpe.c
+[armeabi] Compile thumb  : python <= pymath.c
+[armeabi] Compile thumb  : python <= pystate.c
+[armeabi] Compile thumb  : python <= pystrcmp.c
+[armeabi] Compile thumb  : python <= pystrtod.c
+[armeabi] Compile thumb  : python <= Python-ast.c
+[armeabi] Compile thumb  : python <= pythonrun.c
+[armeabi] Compile thumb  : python <= random.c
+[armeabi] Compile thumb  : python <= sigcheck.c
+[armeabi] Compile thumb  : python <= strdup.c
+[armeabi] Compile thumb  : python <= structmember.c
+[armeabi] Compile thumb  : python <= symtable.c
+[armeabi] Compile thumb  : python <= sysmodule.c
+[armeabi] Compile thumb  : python <= thread.c
+[armeabi] Compile thumb  : python <= traceback.c
+[armeabi] SharedLibrary  : libpython.so
+[armeabi] Install        : libpython.so => libs/armeabi/libpython.so
