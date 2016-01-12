@@ -1125,7 +1125,7 @@ bytearray_dealloc(PyByteArrayObject *self)
 #include "stringlib/find.h"
 #include "stringlib/partition.h"
 #include "stringlib/split.h"
-#include "stringlib/ctype.h"
+#include "stringlib/ndk_changed_ctype.h"
 #include "stringlib/transmogrify.h"
 
 

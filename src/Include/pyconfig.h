@@ -254,7 +254,7 @@
 #define HAVE_FTELLO 1
 
 /* Define to 1 if you have the `ftime' function. */
-#define HAVE_FTIME 1
+// #define HAVE_FTIME 1
 
 /* Define to 1 if you have the `ftruncate' function. */
 #define HAVE_FTRUNCATE 1
@@ -1086,8 +1086,8 @@
 /* Define if you want SIGFPE handled (see Include/pyfpe.h). */
 /* #undef WANT_SIGFPE_HANDLER */
 
-/* Define if you want wndk_changed_ctype.h functions to be used instead of the one
-   supplied by Python itself. (see Include/unicodendk_changed_ctype.h). */
+/* Define if you want wctype.h functions to be used instead of the one
+   supplied by Python itself. (see Include/unicodectype.h). */
 /* #undef WANT_WCTYPE_FUNCTIONS */
 
 /* Define if WINDOW in curses.h offers a field _flags. */
@@ -1265,6 +1265,8 @@
 
 //python源码(loop.c)提示如果没有site模块，一个pythonrun.c里面的一个变量要设置为1
 #define NDK_PY_NO_SITE 1
+
+// #define PREFIX "."
 
 #endif /*Py_PYCONFIG_H*/
 

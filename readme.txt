@@ -54,8 +54,8 @@ PC:Apple-10.9.5, Python-2.7.5
 	原因: 不知道原因，但mactoolboxglue.c看起来没什么用
 	解决: 直接删掉mactoolboxglue.c
 
-	错误: pymath.o里面的汇编代码出错
-	原因: 不知道，但汇编代码经常是不可移植的，这两个函数也没什么用。
+	错误: pymath.c里面的汇编代码出错
+	原因: 不知道，但汇编代码经常是不可移植的，况且这两个函数也没什么用。
 	解决: 注释pyconfig.h里面的#define HAVE_GCC_ASM_FOR_X87 1
 
 	错误: pythonrun.c:32:22 找不到langinfo.h
@@ -90,13 +90,21 @@ PC:Apple-10.9.5, Python-2.7.5
 	原因: 一些必须要有的模块不是以_开头，所以被删掉了
 	解决: 把(gcmodule.c,getbuildinfo.c,config.c,等等)模块加到编译列表里面
 
-	错误: 找不到sys/timeb.h
-	原因: android-21没有这个头文件
-	解决: 不编译time模块
+	错误: Py_Initialize(): no module named site
+	原因: site依赖另一个不能编译的模块,所以直接把site去掉算了
+	解决: 在pyconfig.h里面define NDK_PY_NO_SITE 1
 
+	错误: 
+	原因: 
+	解决: 
+
+	错误: 一些优化
+	原因: src/Objects/stringlib/ctype.h文件名和系统的ctype.h冲突，每次xcode编译的时候都要把它从搜索目录里去掉，索性直接把它换个名字
+	解决: ctype.h重命名为ndk_changed_ctype.h，并修改所有include的源码
 
 	错误: 剩下一些警告
 	原因: 位操作可能越界，不知道为什么，无法解决。
 	解决: 无法解决。
 
 	编译成功。
+
