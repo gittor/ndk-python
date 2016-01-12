@@ -87,12 +87,12 @@ PC:Apple-10.9.5, Python-2.7.5
 	解决: 编译Modules目录(不含子目录)里面以_开头的文件，删除其中不能编译的(_bsddb,_cursor,_elementtree,_hashopenssl,_ssl,_tkinter,_ctypes,_multiprocessing,_sqlite,expat,zlib)
 
 	错误: 一些链接错误
-	原因: 一些模块不是以_开头，所以被删掉了
-	解决: 把(gcmodule.c,getbuildinfo.c,config.c,getpath.c,rotatingtree.c)模块加到编译列表里面
+	原因: 一些必须要有的模块不是以_开头，所以被删掉了
+	解决: 把(gcmodule.c,getbuildinfo.c,config.c,等等)模块加到编译列表里面
 
-	错误: 
-	原因: 
-	解决: 
+	错误: 找不到sys/timeb.h
+	原因: android-21没有这个头文件
+	解决: 不编译time模块
 
 
 	错误: 剩下一些警告

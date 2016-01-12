@@ -47,6 +47,12 @@ struct _inittab _PyImport_Inittab[] = {
 {"_sre", init_sre},
 {"_codecs", init_codecs},
 {"_weakref", init_weakref},
+{"_symtable", init_symtable},
+{"thread", initthread},
+{"errno", initerrno},
+{"xxsubtype", initxxsubtype},
+{"posix", initposix},
+
 /* -- ADDMODULE MARKER 2 -- */
 
     /* This module lives in marshal.c */

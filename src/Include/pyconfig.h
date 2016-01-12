@@ -105,7 +105,7 @@
 #define HAVE_C99_BOOL 1
 
 /* Define to 1 if you have the 'chflags' function. */
-#define HAVE_CHFLAGS 1
+// #define HAVE_CHFLAGS 1
 
 /* Define to 1 if you have the `chown' function. */
 #define HAVE_CHOWN 1
@@ -117,7 +117,7 @@
 #define HAVE_CLOCK 1
 
 /* Define to 1 if you have the `confstr' function. */
-#define HAVE_CONFSTR 1
+// #define HAVE_CONFSTR 1
 
 /* Define to 1 if you have the <conio.h> header file. */
 /* #undef HAVE_CONIO_H */
@@ -126,10 +126,10 @@
 #define HAVE_COPYSIGN 1
 
 /* Define to 1 if you have the `ctermid' function. */
-#define HAVE_CTERMID 1
+// #define HAVE_CTERMID 1
 
 /* Define if you have the 'ctermid_r' function. */
-#define HAVE_CTERMID_R 1
+// #define HAVE_CTERMID_R 1
 
 /* Define to 1 if you have the <curses.h> header file. */
 #define HAVE_CURSES_H 1
@@ -230,7 +230,7 @@
 #define HAVE_FORK 1
 
 /* Define to 1 if you have the `forkpty' function. */
-#define HAVE_FORKPTY 1
+// #define HAVE_FORKPTY 1
 
 /* Define to 1 if you have the `fpathconf' function. */
 #define HAVE_FPATHCONF 1
@@ -300,7 +300,7 @@
 #define HAVE_GETITIMER 1
 
 /* Define to 1 if you have the `getloadavg' function. */
-#define HAVE_GETLOADAVG 1
+// #define HAVE_GETLOADAVG 1
 
 /* Define to 1 if you have the `getlogin' function. */
 #define HAVE_GETLOGIN 1
@@ -402,10 +402,10 @@
 /* #undef HAVE_LARGEFILE_SUPPORT */
 
 /* Define to 1 if you have the 'lchflags' function. */
-#define HAVE_LCHFLAGS 1
+// #define HAVE_LCHFLAGS 1
 
 /* Define to 1 if you have the `lchmod' function. */
-#define HAVE_LCHMOD 1
+// #define HAVE_LCHMOD 1
 
 /* Define to 1 if you have the `lchown' function. */
 #define HAVE_LCHOWN 1
@@ -489,7 +489,7 @@
 #define HAVE_NICE 1
 
 /* Define to 1 if you have the `openpty' function. */
-#define HAVE_OPENPTY 1
+// #define HAVE_OPENPTY 1
 
 /* Define if compiling using MacOS X 10.5 SDK or later. */
 #define HAVE_OSX105_SDK 1
@@ -666,7 +666,7 @@
 /* #undef HAVE_STAT_TV_NSEC */
 
 /* Define if you have struct stat.st_mtimensec */
-#define HAVE_STAT_TV_NSEC2 1
+// #define HAVE_STAT_TV_NSEC2 1
 
 /* Define if your compiler supports variable length function prototypes (e.g.
    void fprintf(FILE *, char *, ...);) *and* <stdarg.h> */
@@ -694,7 +694,7 @@
 /* #undef HAVE_STROPTS_H */
 
 /* Define to 1 if `st_birthtime' is a member of `struct stat'. */
-#define HAVE_STRUCT_STAT_ST_BIRTHTIME 1
+// #define HAVE_STRUCT_STAT_ST_BIRTHTIME 1
 
 /* Define to 1 if `st_blksize' is a member of `struct stat'. */
 #define HAVE_STRUCT_STAT_ST_BLKSIZE 1
@@ -703,10 +703,10 @@
 #define HAVE_STRUCT_STAT_ST_BLOCKS 1
 
 /* Define to 1 if `st_flags' is a member of `struct stat'. */
-#define HAVE_STRUCT_STAT_ST_FLAGS 1
+// #define HAVE_STRUCT_STAT_ST_FLAGS 1
 
 /* Define to 1 if `st_gen' is a member of `struct stat'. */
-#define HAVE_STRUCT_STAT_ST_GEN 1
+// #define HAVE_STRUCT_STAT_ST_GEN 1
 
 /* Define to 1 if `st_rdev' is a member of `struct stat'. */
 #define HAVE_STRUCT_STAT_ST_RDEV 1
@@ -725,7 +725,7 @@
 #define HAVE_SYSCONF 1
 
 /* Define to 1 if you have the <sysexits.h> header file. */
-#define HAVE_SYSEXITS_H 1
+// #define HAVE_SYSEXITS_H 1
 
 /* Define to 1 if you have the <sys/audioio.h> header file. */
 /* #undef HAVE_SYS_AUDIOIO_H */
@@ -1086,8 +1086,8 @@
 /* Define if you want SIGFPE handled (see Include/pyfpe.h). */
 /* #undef WANT_SIGFPE_HANDLER */
 
-/* Define if you want wctype.h functions to be used instead of the one
-   supplied by Python itself. (see Include/unicodectype.h). */
+/* Define if you want wndk_changed_ctype.h functions to be used instead of the one
+   supplied by Python itself. (see Include/unicodendk_changed_ctype.h). */
 /* #undef WANT_WCTYPE_FUNCTIONS */
 
 /* Define if WINDOW in curses.h offers a field _flags. */
@@ -1262,6 +1262,9 @@
 #if defined(__USLC__) && defined(__SCO_VERSION__)
 #define STRICT_SYSV_CURSES /* Don't use ncurses extensions */
 #endif
+
+//python源码(loop.c)提示如果没有site模块，一个pythonrun.c里面的一个变量要设置为1
+#define NDK_PY_NO_SITE 1
 
 #endif /*Py_PYCONFIG_H*/
 
