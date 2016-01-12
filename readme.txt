@@ -82,9 +82,18 @@ PC:Apple-10.9.5, Python-2.7.5
 	原因: 没有python默认加载哪些模块的配置了
 	解决: 拷贝config.c到Modules，config.c配置的大多是Modules里面的模块，由于没有编译Modules，所以删掉config.c里面的Modules相关配置
 
+	错误: 目前已经可以正常使用了，但是在测试的时候，发现某些必须的库不能正确加载，所以要编译那些库
+	原因: 这些库应该是包含在Modules目录里的
+	解决: 编译Modules目录(不含子目录)里面以_开头的文件，删除其中不能编译的(_bsddb,_cursor,_elementtree,_hashopenssl,_ssl,_tkinter,_ctypes,_multiprocessing,_sqlite,expat,zlib)
+
+	错误: 一些链接错误
+	原因: 一些模块不是以_开头，所以被删掉了
+	解决: 把(gcmodule.c,getbuildinfo.c,config.c,getpath.c,rotatingtree.c)模块加到编译列表里面
+
 	错误: 
 	原因: 
 	解决: 
+
 
 	错误: 剩下一些警告
 	原因: 位操作可能越界，不知道为什么，无法解决。

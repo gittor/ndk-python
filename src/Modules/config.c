@@ -43,7 +43,10 @@ extern void init_ast(void);
 extern void _PyWarnings_Init(void);
 
 struct _inittab _PyImport_Inittab[] = {
-    
+
+{"_sre", init_sre},
+{"_codecs", init_codecs},
+{"_weakref", init_weakref},
 /* -- ADDMODULE MARKER 2 -- */
 
     /* This module lives in marshal.c */

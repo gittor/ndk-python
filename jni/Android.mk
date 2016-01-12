@@ -7,10 +7,40 @@ include $(CLEAR_VARS)
 LOCAL_MODULE := libpython
 LOCAL_MODULE_FILENAME := libpython
 
-LOCAL_SRC_FILES := $(LOCAL_PATH)/../src/Modules/config.c \
+LOCAL_SRC_FILES := $(LOCAL_PATH)/../src/Modules/_bisectmodule.c \
+$(LOCAL_PATH)/../src/Modules/_codecsmodule.c \
+$(LOCAL_PATH)/../src/Modules/_collectionsmodule.c \
+$(LOCAL_PATH)/../src/Modules/_csv.c \
+$(LOCAL_PATH)/../src/Modules/_functoolsmodule.c \
+$(LOCAL_PATH)/../src/Modules/_heapqmodule.c \
+$(LOCAL_PATH)/../src/Modules/_hotshot.c \
+$(LOCAL_PATH)/../src/Modules/_json.c \
+$(LOCAL_PATH)/../src/Modules/_localemodule.c \
+$(LOCAL_PATH)/../src/Modules/_lsprof.c \
+$(LOCAL_PATH)/../src/Modules/_math.c \
+$(LOCAL_PATH)/../src/Modules/_randommodule.c \
+$(LOCAL_PATH)/../src/Modules/_sre.c \
+$(LOCAL_PATH)/../src/Modules/_struct.c \
+$(LOCAL_PATH)/../src/Modules/_weakref.c \
+$(LOCAL_PATH)/../src/Modules/config.c \
 $(LOCAL_PATH)/../src/Modules/gcmodule.c \
 $(LOCAL_PATH)/../src/Modules/getbuildinfo.c \
 $(LOCAL_PATH)/../src/Modules/getpath.c \
+$(LOCAL_PATH)/../src/Modules/rotatingtree.c \
+$(LOCAL_PATH)/../src/Modules/_io/_iomodule.c \
+$(LOCAL_PATH)/../src/Modules/_io/bufferedio.c \
+$(LOCAL_PATH)/../src/Modules/_io/bytesio.c \
+$(LOCAL_PATH)/../src/Modules/_io/fileio.c \
+$(LOCAL_PATH)/../src/Modules/_io/iobase.c \
+$(LOCAL_PATH)/../src/Modules/_io/stringio.c \
+$(LOCAL_PATH)/../src/Modules/_io/textio.c \
+$(LOCAL_PATH)/../src/Modules/cjkcodecs/_codecs_cn.c \
+$(LOCAL_PATH)/../src/Modules/cjkcodecs/_codecs_hk.c \
+$(LOCAL_PATH)/../src/Modules/cjkcodecs/_codecs_iso2022.c \
+$(LOCAL_PATH)/../src/Modules/cjkcodecs/_codecs_jp.c \
+$(LOCAL_PATH)/../src/Modules/cjkcodecs/_codecs_kr.c \
+$(LOCAL_PATH)/../src/Modules/cjkcodecs/_codecs_tw.c \
+$(LOCAL_PATH)/../src/Modules/cjkcodecs/multibytecodec.c \
 $(LOCAL_PATH)/../src/Objects/abstract.c \
 $(LOCAL_PATH)/../src/Objects/boolobject.c \
 $(LOCAL_PATH)/../src/Objects/bufferobject.c \
