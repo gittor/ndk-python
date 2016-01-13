@@ -1266,7 +1266,8 @@
 //python源码(loop.c)提示如果没有site模块，一个pythonrun.c里面的一个变量要设置为1
 #define NDK_PY_NO_SITE 1
 
-// #define PREFIX "."
+//#define PREFIX "."
+//#define PYTHONPATH ".:Lib"
 
 #endif /*Py_PYCONFIG_H*/
 

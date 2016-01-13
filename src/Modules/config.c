@@ -34,6 +34,12 @@ extern void init_weakref(void);
 extern void initzipimport(void);
 extern void init_symtable(void);
 extern void initxxsubtype(void);
+
+/* --  -- */
+extern void init_struct(void);
+extern void initdatetime();
+extern void inittime();
+
 /* -- ADDMODULE MARKER 1 -- */
 
 extern void PyMarshal_Init(void);
@@ -44,14 +50,18 @@ extern void _PyWarnings_Init(void);
 
 struct _inittab _PyImport_Inittab[] = {
 
-{"_sre", init_sre},
-{"_codecs", init_codecs},
-{"_weakref", init_weakref},
-{"_symtable", init_symtable},
-{"thread", initthread},
-{"errno", initerrno},
-{"xxsubtype", initxxsubtype},
-{"posix", initposix},
+    {"_sre", init_sre},
+    {"_codecs", init_codecs},
+    {"_weakref", init_weakref},
+    {"_symtable", init_symtable},
+    {"thread", initthread},
+    {"errno", initerrno},
+    {"xxsubtype", initxxsubtype},
+    {"posix", initposix},
+
+    {"_struct", init_struct},
+    {"datetime", initdatetime},
+    {"time", inittime},
 
 /* -- ADDMODULE MARKER 2 -- */
 
