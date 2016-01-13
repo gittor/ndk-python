@@ -55,6 +55,8 @@ $(LOCAL_PATH)/../src/Modules/threadmodule.c \
 $(LOCAL_PATH)/../src/Modules/timemodule.c \
 $(LOCAL_PATH)/../src/Modules/timingmodule.c \
 $(LOCAL_PATH)/../src/Modules/xxsubtype.c \
+$(LOCAL_PATH)/../src/Modules/zipimport.c \
+$(LOCAL_PATH)/../src/Modules/zlibmodule.c \
 $(LOCAL_PATH)/../src/Modules/_io/_iomodule.c \
 $(LOCAL_PATH)/../src/Modules/_io/bufferedio.c \
 $(LOCAL_PATH)/../src/Modules/_io/bytesio.c \
@@ -69,6 +71,18 @@ $(LOCAL_PATH)/../src/Modules/cjkcodecs/_codecs_jp.c \
 $(LOCAL_PATH)/../src/Modules/cjkcodecs/_codecs_kr.c \
 $(LOCAL_PATH)/../src/Modules/cjkcodecs/_codecs_tw.c \
 $(LOCAL_PATH)/../src/Modules/cjkcodecs/multibytecodec.c \
+$(LOCAL_PATH)/../src/Modules/zlib/adler32.c \
+$(LOCAL_PATH)/../src/Modules/zlib/compress.c \
+$(LOCAL_PATH)/../src/Modules/zlib/crc32.c \
+$(LOCAL_PATH)/../src/Modules/zlib/deflate.c \
+$(LOCAL_PATH)/../src/Modules/zlib/gzio.c \
+$(LOCAL_PATH)/../src/Modules/zlib/infback.c \
+$(LOCAL_PATH)/../src/Modules/zlib/inffast.c \
+$(LOCAL_PATH)/../src/Modules/zlib/inflate.c \
+$(LOCAL_PATH)/../src/Modules/zlib/inftrees.c \
+$(LOCAL_PATH)/../src/Modules/zlib/trees.c \
+$(LOCAL_PATH)/../src/Modules/zlib/uncompr.c \
+$(LOCAL_PATH)/../src/Modules/zlib/zutil.c \
 $(LOCAL_PATH)/../src/Objects/abstract.c \
 $(LOCAL_PATH)/../src/Objects/boolobject.c \
 $(LOCAL_PATH)/../src/Objects/bufferobject.c \

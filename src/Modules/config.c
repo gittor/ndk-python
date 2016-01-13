@@ -39,6 +39,7 @@ extern void initxxsubtype(void);
 extern void init_struct(void);
 extern void initdatetime();
 extern void inittime();
+extern void initzlib();
 
 /* -- ADDMODULE MARKER 1 -- */
 
@@ -62,6 +63,8 @@ struct _inittab _PyImport_Inittab[] = {
     {"_struct", init_struct},
     {"datetime", initdatetime},
     {"time", inittime},
+    {"zipimport", initzipimport},
+    {"zlib", initzlib},
 
 /* -- ADDMODULE MARKER 2 -- */
 
