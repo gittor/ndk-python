@@ -17,6 +17,8 @@ $(LOCAL_PATH)/../src/Objects \\
 $(LOCAL_PATH)/../src/Parser \\
 $(LOCAL_PATH)/../src/Python
 
+LOCAL_EXPORT_C_INCLUDES := $LOCAL_C_INCLUDES
+
 include $(BUILD_SHARED_LIBRARY)
 
 '''

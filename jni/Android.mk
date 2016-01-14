@@ -38,6 +38,7 @@ $(LOCAL_PATH)/../src/Modules/getbuildinfo.c \
 $(LOCAL_PATH)/../src/Modules/getpath.c \
 $(LOCAL_PATH)/../src/Modules/imageop.c \
 $(LOCAL_PATH)/../src/Modules/itertoolsmodule.c \
+$(LOCAL_PATH)/../src/Modules/main.c \
 $(LOCAL_PATH)/../src/Modules/mathmodule.c \
 $(LOCAL_PATH)/../src/Modules/md5.c \
 $(LOCAL_PATH)/../src/Modules/md5module.c \
@@ -71,18 +72,6 @@ $(LOCAL_PATH)/../src/Modules/cjkcodecs/_codecs_jp.c \
 $(LOCAL_PATH)/../src/Modules/cjkcodecs/_codecs_kr.c \
 $(LOCAL_PATH)/../src/Modules/cjkcodecs/_codecs_tw.c \
 $(LOCAL_PATH)/../src/Modules/cjkcodecs/multibytecodec.c \
-$(LOCAL_PATH)/../src/Modules/zlib/adler32.c \
-$(LOCAL_PATH)/../src/Modules/zlib/compress.c \
-$(LOCAL_PATH)/../src/Modules/zlib/crc32.c \
-$(LOCAL_PATH)/../src/Modules/zlib/deflate.c \
-$(LOCAL_PATH)/../src/Modules/zlib/gzio.c \
-$(LOCAL_PATH)/../src/Modules/zlib/infback.c \
-$(LOCAL_PATH)/../src/Modules/zlib/inffast.c \
-$(LOCAL_PATH)/../src/Modules/zlib/inflate.c \
-$(LOCAL_PATH)/../src/Modules/zlib/inftrees.c \
-$(LOCAL_PATH)/../src/Modules/zlib/trees.c \
-$(LOCAL_PATH)/../src/Modules/zlib/uncompr.c \
-$(LOCAL_PATH)/../src/Modules/zlib/zutil.c \
 $(LOCAL_PATH)/../src/Objects/abstract.c \
 $(LOCAL_PATH)/../src/Objects/boolobject.c \
 $(LOCAL_PATH)/../src/Objects/bufferobject.c \
@@ -190,6 +179,8 @@ LOCAL_C_INCLUDES := $(LOCAL_PATH)/../src/Include \
 $(LOCAL_PATH)/../src/Objects \
 $(LOCAL_PATH)/../src/Parser \
 $(LOCAL_PATH)/../src/Python
+
+LOCAL_EXPORT_C_INCLUDES := $LOCAL_C_INCLUDES
 
 include $(BUILD_SHARED_LIBRARY)
 

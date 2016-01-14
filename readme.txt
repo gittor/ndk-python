@@ -1,13 +1,15 @@
 [前言]
-网上有一些ndk编译python的做法，但按照教程做总是不成功，可能是shell的版本不一样。
+网上有一些ndk编译python的做法，但按照教程做总是不成功，可能是环境版本不一样，导致很多地方的配置都不成功。
 网上的大多是python-2.x的编译方法，由于我没有3.x的环境，所以没有真正测试，但我的方法应该可以胜任3.x的移植。
 网上的教程大多只有做法，没有解释，这篇教程加上了每一步为什么这么做的解释。
+本教程所用的方法涉及底层，目测极其复杂，请慎重阅读。
 
 [制作目的]
-不是：编译一个可执行文件Python
+不是：编译一个可执行文件Python.exe
 而是：把python源文件编译成静态库，用在项目里面，简化一些cpp不容易处理的问题，比如xml,json读写等
 不是：需要python的所有特性和库
-而是：编译python的标准功能，尽可能地编译一些第三方库进去，比如xml,json,network,proto的解析等。
+而是：尽可能编译python的标准功能
+最终结果：编译出了一个标准库的子集，有一些功能缺失。
 
 [环境配置]
 已经安装好的Python环境，假设Python版本号是[py-version]。
@@ -19,13 +21,14 @@ PC:Apple-10.9.5, Python-2.7.5
 源码:Python-2.7.5
 
 [制作过程]
-*新建一个ndk工程
+*新建一个ndk工程(ndk-python)
 	目录结构为:	ndk-python|jni(文件夹，存放Android.mk和Application.mk文件)
 				ndk-python|src(文件夹，存放要编译的源码)
-*将要python-2.7.5源码拷贝到ndk工程
+*将要编译的python-2.7.5源码拷贝到ndk工程
 	cp Python-2.7.5/Python ndk-python/src; Python目录是python的语法核心
 	cp Python-2.7.5/Objects ndk-python/src; Objects目录是python的核心对象
 	cp Python-2.7.5/Parser ndk-python/src; Parser目录是语法解释器
+	cp Python-2.7.5/Modules ndk-python/src; Modules目录是标准库的一部分
 	cp Python-2.7.5/Include ndk-python/src; Include目录包含了所有的头文件
 *生成pyconfig.h
 	pyconfig.h是python用来支持跨平台编译的文件，每个平台都不一样，需要自己用configure脚本生成
@@ -35,6 +38,7 @@ PC:Apple-10.9.5, Python-2.7.5
 	准备工作结束
 *编写Application.mk
 	APP_PLATFORM不能用19，android-19有一个语言相关的结构体不正确
+	本次编译用的是android-21
 *编译并排错
 	运行sh compile.sh
 	
@@ -55,7 +59,7 @@ PC:Apple-10.9.5, Python-2.7.5
 	解决: 直接删掉mactoolboxglue.c
 
 	错误: pymath.c里面的汇编代码出错
-	原因: 不知道，但汇编代码经常是不可移植的，况且这两个函数也没什么用。
+	原因: 不知道，但汇编代码经常是不可移植的，况且这两个函数看起来也没什么用。
 	解决: 注释pyconfig.h里面的#define HAVE_GCC_ASM_FOR_X87 1
 
 	错误: pythonrun.c:32:22 找不到langinfo.h
@@ -103,8 +107,11 @@ PC:Apple-10.9.5, Python-2.7.5
 	解决: ctype.h重命名为ndk_changed_ctype.h，并修改所有include的源码
 
 	错误: 剩下一些警告
-	原因: 位操作可能越界，不知道为什么，无法解决。
+	原因: 位操作可能越界，不知道ndk为什么这么提示，大致看了一下，不太可能越界。
 	解决: 无法解决。
 
 	编译成功。
 
+[使用须知]
+	这次提取出来的文件，没有zlib相关功能，所以在使用的时候，需要另外把zlib库加进来。如果是cocos项目，由于cocos本身集成了zlib，所以不用管这个问题了。
+	实际运行的时候，需要把Python-2.7.5/Lib目录拷贝到一个ndk-python程序可以读取的地方，这个目录也是python标准库的一部分，可以只拷贝其中的一部分
