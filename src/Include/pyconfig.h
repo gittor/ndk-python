@@ -439,9 +439,11 @@
 
 /* Define to 1 if you have the <linux/netlink.h> header file. */
 /* #undef HAVE_LINUX_NETLINK_H */
+#define HAVE_LINUX_NETLINK_H 1
 
 /* Define to 1 if you have the <linux/tipc.h> header file. */
 /* #undef HAVE_LINUX_TIPC_H */
+#define HAVE_LINUX_TIPC_H 1
 
 /* Define to 1 if you have the `log1p' function. */
 #define HAVE_LOG1P 1
@@ -645,7 +647,7 @@
 #define HAVE_SNPRINTF 1
 
 /* Define if sockaddr has sa_len member */
-#define HAVE_SOCKADDR_SA_LEN 1
+// #define HAVE_SOCKADDR_SA_LEN 1
 
 /* struct sockaddr_storage (sys/socket.h) */
 #define HAVE_SOCKADDR_STORAGE 1

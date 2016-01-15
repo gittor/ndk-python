@@ -50,6 +50,7 @@ $(LOCAL_PATH)/../src/Modules/rotatingtree.c \
 $(LOCAL_PATH)/../src/Modules/sha256module.c \
 $(LOCAL_PATH)/../src/Modules/sha512module.c \
 $(LOCAL_PATH)/../src/Modules/shamodule.c \
+$(LOCAL_PATH)/../src/Modules/socketmodule.c \
 $(LOCAL_PATH)/../src/Modules/stropmodule.c \
 $(LOCAL_PATH)/../src/Modules/symtablemodule.c \
 $(LOCAL_PATH)/../src/Modules/threadmodule.c \

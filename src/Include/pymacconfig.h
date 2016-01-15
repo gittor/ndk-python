@@ -24,6 +24,9 @@
 # undef DOUBLE_IS_LITTLE_ENDIAN_IEEE754
 # undef HAVE_GCC_ASM_FOR_X87
 
+# undef HAVE_LINUX_NETLINK_H
+# undef HAVE_LINUX_TIPC_H
+
 #    undef VA_LIST_IS_ARRAY
 #    if defined(__LP64__) && defined(__x86_64__)
 #        define VA_LIST_IS_ARRAY 1

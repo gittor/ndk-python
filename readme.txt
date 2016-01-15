@@ -98,6 +98,10 @@ PC:Apple-10.9.5, Python-2.7.5
 	原因: site依赖另一个不能编译的模块,所以直接把site去掉算了
 	解决: 在pyconfig.h里面define NDK_PY_NO_SITE 1
 
+	错误: 在Android上运行的时候，setdefaultencoding('utf-8')导致崩溃
+	原因: pyconfig.h中的类型大小定义出错
+	解决: 重新定义一个pyandroidconfig.h,并在Python.h中增加条件编译。
+
 	错误: 
 	原因: 
 	解决: 
@@ -112,6 +116,10 @@ PC:Apple-10.9.5, Python-2.7.5
 
 	编译成功。
 
+[最终结果]
+	Modules目录:常用功能编译完成。
+	其它目录:除了Python调用C库的方法(dynload_*.c)外，都编译完成。
+	
 [使用须知]
 	这次提取出来的文件，没有zlib相关功能，所以在使用的时候，需要另外把zlib库加进来。如果是cocos项目，由于cocos本身集成了zlib，所以不用管这个问题了。
 	实际运行的时候，需要把Python-2.7.5/Lib目录拷贝到一个ndk-python程序可以读取的地方，这个目录也是python标准库的一部分，可以只拷贝其中的一部分
